@@ -40,3 +40,9 @@ A catalog named catalog_emp_attrition was created to group all project-related d
 A schema named schema_emp_att was created within the catalog to organize datasets
 This setup establishes a clear and scalable foundation for managing data across the Medallion Architecture (Bronze, Silver, Gold).
 ![Catalog Setup](images/002_catalog_creation.png)
+
+** Data Upload to Volume**
+This step confirms the successful upload of the raw dataset into the Unity Catalog volume.
+The dataset Employee-Attrition.csv was uploaded into the volume
+The file is stored within the schema under the volume (displayed as “files” in the Databricks UI)
+![Data Uploaded](images/003_data_uploaded.png)
