@@ -42,6 +42,7 @@ This setup establishes a clear and scalable foundation for managing data across 
 ![Catalog Setup](images/002_catalog_creation.png)
 
 ** Data Upload to Volume**
+
 This step confirms the successful upload of the raw dataset into the Unity Catalog volume.
 The dataset Employee-Attrition.csv was uploaded into the volume
 The file is stored within the schema under the volume (displayed as “files” in the Databricks UI)
