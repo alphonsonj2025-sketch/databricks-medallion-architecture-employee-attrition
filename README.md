@@ -77,3 +77,30 @@ Gold Layer (emp_gold) → Stores aggregated, business-ready data
 📌 **Step 2: Verify Folder Structure in Unity Catalog**
 
 ![Unity Catalog Structure](images/006_unity_catalog_volume_structure.png)
+
+📌 **Step 3: Read Data from Bronze Layer**
+After uploading the dataset into the Bronze layer, the next step is to read the raw data using PySpark.
+🔧 **Code**
+
+df_empatt = spark.read.format("csv") \
+    .option("header", "true") \
+    .option("inferSchema", "true") \
+    .load("/Volumes/catalog_emp_attrition/schema_emp_att/files/Emp_bronze/Employee-Attrition.csv")
+
+display(df_empatt)
+
+🧠 **Explanation**
+This step reads raw CSV data from the Bronze layer into a PySpark DataFrame:
+header = true → Uses the first row as column names
+inferSchema = true → Automatically detects data types
+load() → Reads data from Unity Catalog Volume
+👉 At this stage, data remains unprocessed and in its raw format, which aligns with the Bronze layer principles in Medallion Architecture.
+
+This approach ensures scalability and aligns with modern lakehouse architecture best practices using Unity Catalog and Delta Lake.
+
+📊 **Output Preview**
+The DataFrame preview confirms that:
+Data is successfully loaded
+Schema is correctly inferred
+Dataset is ready for transformation (Silver layer)
+![Read Bronze Data](images/007_read_bronze_data.png)
