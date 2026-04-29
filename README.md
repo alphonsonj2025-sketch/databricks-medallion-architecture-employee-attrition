@@ -111,3 +111,33 @@ Data is successfully loaded
 Schema is correctly inferred
 Dataset is ready for transformation (Silver layer)
 ![Read Bronze Data](images/007_read_bronze_data.png)
+
+🟤 **Bronze Layer – Data Ingestion**
+
+The Bronze layer represents the raw ingestion of employee attrition data into Delta Lake using Databricks.
+At this stage, data is ingested as-is without transformations to preserve the original dataset for traceability and auditing.
+
+🔹 **Step 1: Load Raw Data**
+
+The dataset was loaded into a Spark DataFrame for processing.
+![Bronze Data Preview](images/bronze/008_bronze_data_preview.png)
+
+**Step 2: Write Data to Delta Table**
+
+The raw data was stored as a Delta table using the following approach:
+
+df_empatt.write.mode("overwrite") \
+.saveAsTable("catalog_emp_attrition.schema_emp_att.bronze_emp_attrition")
+
+🔹**Step 3: Delta Table Created**
+
+The table was successfully created in Unity Catalog as a managed Delta table.
+
+![Bronze Table Created](images/bronze/009_bronze_table_created.png)
+
+✅ **Key Features**
+
+Stored in Delta Lake format
+Supports ACID transactions
+Enables time travel & versioning
+Acts as the single source of truth (raw data)
