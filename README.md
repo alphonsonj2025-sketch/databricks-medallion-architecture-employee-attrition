@@ -28,6 +28,7 @@ This project uses Unity Catalog to manage data governance, organization, and acc
 /Volumes/catalog_emp_attrition/schema_empatt/empattvol/
 
 ### Layers:
+
 - Bronze → Raw data ingestion
 - Silver → Cleaned and transformed data
 - Gold → Business-ready aggregated data
@@ -63,6 +64,7 @@ Supports batch processing workflows
 🔧 **Code**##
 
 To implement the Medallion Architecture, directories were created inside the Unity Catalog Volume using PySpark utilities.
+
 🔧**Code**
 dbutils.fs.mkdirs("/Volumes/catalog_emp_attrition/schema_emp_att/emp_bronze")
 dbutils.fs.mkdirs("/Volumes/catalog_emp_attrition/schema_emp_att/emp_silver")
@@ -79,7 +81,9 @@ Gold Layer (emp_gold) → Stores aggregated, business-ready data
 ![Unity Catalog Structure](images/006_unity_catalog_volume_structure.png)
 
 📌 **Step 3: Read Data from Bronze Layer**
+
 After uploading the dataset into the Bronze layer, the next step is to read the raw data using PySpark.
+
 🔧 **Code**
 
 df_empatt = spark.read.format("csv") \
@@ -90,10 +94,12 @@ df_empatt = spark.read.format("csv") \
 display(df_empatt)
 
 🧠 **Explanation**
+
 This step reads raw CSV data from the Bronze layer into a PySpark DataFrame:
 header = true → Uses the first row as column names
 inferSchema = true → Automatically detects data types
 load() → Reads data from Unity Catalog Volume
+
 👉 At this stage, data remains unprocessed and in its raw format, which aligns with the Bronze layer principles in Medallion Architecture.
 
 This approach ensures scalability and aligns with modern lakehouse architecture best practices using Unity Catalog and Delta Lake.
