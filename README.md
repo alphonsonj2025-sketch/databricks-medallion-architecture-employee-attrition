@@ -67,7 +67,7 @@ To implement the Medallion Architecture, directories were created inside the Uni
 dbutils.fs.mkdirs("/Volumes/catalog_emp_attrition/schema_emp_att/emp_bronze")
 dbutils.fs.mkdirs("/Volumes/catalog_emp_attrition/schema_emp_att/emp_silver")
 dbutils.fs.mkdirs("/Volumes/catalog_emp_attrition/schema_emp_att/emp_gold")
-![Folder Creation](images/006_folder_creation_code.png)
+![Folder Creation](images/005_folder_creation_code.png)
 
 This step creates three layers for structured data processing:
 Bronze Layer (emp_bronze) → Stores raw, unprocessed data
@@ -76,4 +76,4 @@ Gold Layer (emp_gold) → Stores aggregated, business-ready data
 
 📌 **Step 2: Verify Folder Structure in Unity Catalog**
 
-![Unity Catalog Structure](images/005_unity_catalog_volume_structure.png)
+![Unity Catalog Structure](images/006_unity_catalog_volume_structure.png)
