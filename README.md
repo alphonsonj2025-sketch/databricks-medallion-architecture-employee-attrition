@@ -144,8 +144,128 @@ Enables time travel & versioning
 Acts as the single source of truth (raw data)
 
 
-***🥈 ##Silver Layer – Data Cleaning & Transformation##***
+
+🥈 **Silver Layer – Data Cleaning & Transformation**
 
 📌 **Objective**
 
-Transform raw data into a clean, standardized, and analytics-ready dataset.
+Transform raw Bronze data into a clean, structured, and analytics-ready dataset by applying standardization, cleaning, and feature engineering
+
+🔹 **Step 1: Read Bronze Table**
+
+Load raw data from the Bronze layer as the foundation for all transformations. This ensures traceability and consistency across the pipeline.
+
+![Step 1 – Read Bronze Table](images/silver/01_read_bronze_table.png)
+
+---
+
+🔹 **Step 2: Inspect Original Columns**
+
+Analyze the dataset structure to identify inconsistencies such as naming issues, casing differences, and formatting challenges.
+
+![Step 2 – Inspect Columns](images/silver/02_original_columns.png)
+
+---
+
+🔹 **Step 3: Column Standardization**
+
+Convert all column names into snake_case to enforce consistency, improve readability, and align with data engineering standards.
+
+![Step 3 – Column Standardization](images/silver/03_column_standardization.png)
+
+---
+
+🔹 **Step 4: Validate Clean Column Names**
+
+Verify that all column names have been successfully standardized and are ready for downstream transformations.
+
+![Step 4 – Clean Columns Verified](images/silver/04_clean_columns_verified.png)
+
+---
+
+🔹 **Step 5: Schema Validation**
+
+Inspect and validate the schema to ensure correct data types and structural integrity before applying further transformations.
+
+![Step 5 – Schema Validation](images/silver/05_schema_validation.png)
+
+---
+
+🔹 **Step 6: Handle Missing Values**
+
+Improve data quality by replacing null values in critical categorical columns:
+
+- **"education_field"** → **"other"**
+- **"job_role"** → **"unknown"**
+
+This ensures completeness and prevents issues during analysis.
+
+![Step 6 – Handle Missing Values](images/silver/06_handle_missing_values.png)
+
+---
+
+🔹 **Step 7: Standardize Categorical Values**
+
+Normalize categorical data by removing inconsistencies such as prefixes (e.g., "Travel_") to ensure uniformity across records.
+
+![Step 7 – Standardize Categories](images/silver/07_standardize_categories.png)
+
+---
+
+🔹 **Step 8: Feature Engineering**
+
+Enhance analytical capability by creating derived columns:
+
+- **"attrition_flag"** → converts Yes/No into binary (1/0)
+- **"age_group"** → segments employees into meaningful categories
+
+![Step 8 – Feature Engineering](images/silver/08_feature_engineering.png)
+
+---
+
+🔹 **Step 9: Data Type Enforcement**
+
+Ensure all columns are assigned appropriate data types to support accurate computations and analysis.
+
+![Step 9 – Data Types](images/silver/09_data_types.png)
+
+---
+
+🔹 **Step 10: Remove Duplicates**
+
+Eliminate duplicate records to maintain data integrity and avoid biased analytical results.
+
+![Step 10 – Remove Duplicates](images/silver/10_remove_duplicates.png)
+
+---
+
+🔹 **Step 11: Data Quality Checks**
+
+Validate dataset reliability through key checks:
+
+- Null value verification
+- Detection of invalid entries (e.g., age < 18)
+
+![Step 11 – Data Quality Checks](images/silver/11_data_quality_checks.png)
+
+---
+
+🔹 **Step 12: Save Silver Table**
+
+Persist the cleaned and transformed dataset as a Delta table for downstream consumption in the Gold layer.
+
+![Step 12 – Save Silver Table](images/silver/12_silver_table_saved.png)
+
+---
+
+📦 **Output Table**
+
+**"silver_employee_attrition_clean"**
+
+---
+
+**🚀 Silver Layer Conclusion**
+
+The Silver layer represents a critical transformation stage where raw data is refined into a trusted, high-quality dataset. By enforcing consistency, improving data quality, and introducing analytical features, this layer ensures that downstream processes operate on reliable and meaningful data.
+
+This structured approach reflects real-world data engineering practices and showcases the ability to build robust, scalable, and business-ready data pipelines, making it highly valuable for analytical workloads and decision-making in the Gold layer.
