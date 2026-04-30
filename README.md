@@ -382,9 +382,13 @@ This dashboard provides a clear overview of employee attrition trends and workfo
 
 ### 📸 Dashboard Preview
 
-![Employee Attrition Dashboard](images/gold/112_attrition_dashboard_overview.png)
+![Employee Attrition Dashboard](images/gold/113_attrition_dashboard_overview.png)
+
+*Figure: Executive overview of employee attrition rate (Yes vs No), showing overall workforce stability and churn distribution.*
+
 
 ### 🔍 Key Insights:
+
 - 16.12% employee attrition rate
 - 83.88% retention rate
 - Indicates moderate attrition risk requiring monitoring
