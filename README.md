@@ -69,6 +69,19 @@ The file is stored within the schema under the volume (displayed as “files” 
 ![Data Uploaded](images/003_data_uploaded.png)
 
 
+## 🏗️ Architecture Diagram
+
+The project follows the Medallion Architecture pattern, organizing data into three layers:
+
+- **Bronze Layer:** Raw data ingestion from source files  
+- **Silver Layer:** Data cleaning, transformation, and validation  
+- **Gold Layer:** Aggregated datasets and business-level insights  
+
+This layered approach ensures data quality, scalability, and efficient analytics.
+
+### 📊 Architecture Overview
+![Medallion Architecture](images/architecture/medallion_architecture.png)
+
 **📂Bronze Layer – Raw Data Ingestion**
 
 The raw employee attrition dataset is successfully ingested into the Bronze layer, serving as the foundation of the Medallion Architecture.
