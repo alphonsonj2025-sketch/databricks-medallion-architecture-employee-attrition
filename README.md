@@ -392,3 +392,36 @@ This dashboard provides a clear overview of employee attrition trends and workfo
 - 16.12% employee attrition rate
 - 83.88% retention rate
 - Indicates moderate attrition risk requiring monitoring
+
+
+
+**📊 Workforce Attrition & Retention Dashboard**
+
+
+This dashboard represents the Gold Layer of the Medallion Architecture, where transformed data is presented as business-ready insights for decision-making.
+It provides a clear overview of employee distribution and attrition trends across departments.
+
+
+📈**Key Metrics**
+
+
+**Attrition Rate**: 16.12% (moderate turnover observed)
+**Retention Rate**: 83.88% (indicates workforce stability)
+
+
+🧠 **Executive Insights**
+
+Research & Development has the highest employee concentration, making it the core operational unit
+Human Resources has the smallest workforce size
+Overall workforce shows strong retention with moderate attrition levels
+
+
+🎯 **Business Recommendation**
+
+
+Focus retention strategies on high-impact departments such as:
+Research & Development
+Sales
+This ensures workforce stability in critical business functions.
+
+![Executive Dashboard](images/gold/114_final_dashboard_executive_insights.png)
