@@ -382,7 +382,7 @@ This dashboard provides a clear overview of employee attrition trends and workfo
 
 ### 📸 Dashboard Preview
 
-![Employee Attrition Dashboard](images/111_attrition_dashboard_overview.png)
+![Employee Attrition Dashboard](images/112_attrition_dashboard_overview.png)
 
 ### 🔍 Key Insights:
 - 16.12% employee attrition rate
