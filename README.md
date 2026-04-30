@@ -1,3 +1,10 @@
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black)
+![Delta Lake](https://img.shields.io/badge/Delta%20Lake-00ADD8?style=for-the-badge&logo=databricks&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Medallion Architecture](https://img.shields.io/badge/Architecture-Medallion%20(Bronze%2FSilver%2FGold)-blue?style=for-the-badge)
+![Data Engineering Project](https://img.shields.io/badge/Project-Data%20Engineering-success?style=for-the-badge)
+
 # Employee Attrition Data Engineering Project (Databricks Medallion Architecture)
 
 ## 📌 Project Overview
@@ -433,11 +440,5 @@ This solution transforms raw employee data into actionable insights using a scal
 - Identified **attrition trends and workforce distribution gaps**  
 - Enabled **data-driven HR strategy and retention planning**
 
-**Key Metrics**  
-
-Executive Insights  
-Business Recommendation  
-Project Outcome   👈 (NEW)  
-Image (Dashboard) 👈 (FINAL)
 
 ![Executive Dashboard](images/gold/114_final_dashboard_executive_insights.png)
