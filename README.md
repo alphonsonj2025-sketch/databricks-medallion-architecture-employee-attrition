@@ -21,11 +21,13 @@ The pipeline follows industry best practices by:
 
 The final output is an interactive dashboard that provides insights into employee attrition trends, workforce distribution, and retention patterns, enabling data-driven decision-making for HR and business stakeholders.
 
-Technologies used:
-- Databricks  (with unity catalog for data governance)
-- PySpark     (data processing)
-- Delta Lake  (storage layer)
-- SQL         (analytic and transformations)
+## 🎯 Key Objectives
+
+- Build a scalable data pipeline using Databricks and Delta Lake  
+- Apply data cleaning and transformation techniques on real-world datasets  
+- Implement Medallion Architecture for structured data processing  
+- Deliver business insights through visualization and reporting
+
 
 - ## 📂 Unity Catalog Implementation
 
